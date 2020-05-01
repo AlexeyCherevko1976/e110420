@@ -59,24 +59,14 @@ function getdetails2(){
 <body>
 <div id="app" class="container-fluid">
 	<div class="row">
-		<div class="col-md-8 col-sm-4">
+		<div class="col-8">
+			<div id="msg"></div>
+		</div>
+		<div class="col-4">
 			<div class="panel panel-default">
 
-    <table>
-        <tr>
-            <td>Your Name:</td>
-            <td><input type="text" name="name" id="name" /><td>
-        </tr>
-        <tr>
-            <td>Roll Number:</td>
-            <td><input type="text" name="rno" id="rno" /><td>
-        </tr>
-        <tr>
-            <td></td>
-            <td><input type="button" name="submit" id="submit" value="submit" onClick = "getdetails()" /></td>
-        </tr>
-    </table>
-    <div id="msg"></div>
+
+    
 
 <form>
   <div class="form-group">
@@ -96,25 +86,17 @@ function getdetails2(){
   <input type="button" name="submit" id="submit" value="submit" onClick = "getdetails2()" />
 </form>
 <div>
-	<?php
+<!-- 	<?php
 	include_once "db/Table.php";
 	$usersTable=new Table();
 	$data=$usersTable->createCommand("SELECT * FROM `users` ");
 	echo $data."<br><br>";
 	//$usersTable->getHost();
 	echo $usersTable->dbname;
-	?>
+	?> -->
 </div>
 
-<select class="form-control form-control-lg">
-  <option>Large select</option>
-</select>
-<select class="form-control">
-  <option>Default select</option>
-</select>
-<select class="form-control form-control-sm">
-  <option>Small select</option>
-</select>
+
 </div>
 </div>
 </div>
