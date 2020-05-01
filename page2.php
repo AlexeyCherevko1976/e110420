@@ -41,11 +41,17 @@ function getdetails2(){
     var valPassword = $('#password1').val();
     $.ajax({
         type: "POST",
+        //dataType:"json",
         url: "analiz1.php",
         data: {login:valLogin, password:valPassword}
     }).done(function( result )
         {
-            $("#msg").html( " Address of Roll no  is "+result );
+        	//let dataR=JSON.stringify(result);
+        	let dataR=result;
+        	//let dataR=JSON.stringify(result);
+        	//let dataR=JSON.parse(result);
+            //$("#msg").html( " Address of Roll no  is "+ JSON.stringify(dataR[1])+"<br><br>");
+            $("#msg").html( " Address of Roll no  is "+ dataR+"<br><br>");
         });
 }
 </script>
@@ -89,6 +95,16 @@ function getdetails2(){
   <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
   <input type="button" name="submit" id="submit" value="submit" onClick = "getdetails2()" />
 </form>
+<div>
+	<?php
+	include_once "db/Table.php";
+	$usersTable=new Table();
+	$data=$usersTable->createCommand("SELECT * FROM `users` ");
+	echo $data."<br><br>";
+	//$usersTable->getHost();
+	echo $usersTable->dbname;
+	?>
+</div>
 
 <select class="form-control form-control-lg">
   <option>Large select</option>
