@@ -24,18 +24,7 @@ echo "Workes!";*/
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 <script>
-function getdetails(){
-    var name = $('#name').val();
-    var rno = $('#rno').val();
-    $.ajax({
-        type: "POST",
-        url: "analiz1.php",
-        data: {fname:name, id:rno}
-    }).done(function( result )
-        {
-            $("#msg").html( " Address of Roll no " +rno +" is "+result );
-        });
-}
+
 function getdetails2(){
     var valLogin = $('#login1').val();
     var valPassword = $('#password1').val();
