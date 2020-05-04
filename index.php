@@ -1,7 +1,20 @@
 <?php
+session_start();
+if (!isset($_SESSION['signup'])){
+	$_SESSION['signup']=false;
+}
 //include_once "page1.php";
 include_once "page2.php";
-//include_once "animation687effection.php"; // work!
+include_once "db/Table.php";
+
+if ($_POST['authorization']){
+	$usersTable=new Table();
+	$login = isset($_POST['login']) ? $_POST['login'] : "NOT LOGIN1";
+	$password = isset($_POST['password']) ? $_POST['password'] : "NOT PASSWORD1";
+	$data=$usersTable->createCommand("SELECT * FROM `users` WHERE `login`='".$login."' AND `password`='".$password."'");
+	$_SESSION['signup']=true;
+	echo "ffff";	
+}
 
 
 

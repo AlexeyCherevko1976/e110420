@@ -23,16 +23,20 @@ echo "Workes!";*/
 <head>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 <script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="js/application.js"></script>
+
 <script>
 
-function getdetails2(){
+function authorization(){
     var valLogin = $('#login1').val();
     var valPassword = $('#password1').val();
-    $.ajax({
+    alert("fffff");
+    //var authorization=true;
+    /*$.ajax({
         type: "POST",
         //dataType:"json",
-        url: "analiz1.php",
-        data: {login:valLogin, password:valPassword}
+        url: "index.php",
+        data: {login:valLogin, password:valPassword, authorization:true}
     }).done(function( result )
         {
         	//let dataR=JSON.stringify(result);
@@ -41,7 +45,7 @@ function getdetails2(){
         	//let dataR=JSON.parse(result);
             //$("#msg").html( " Address of Roll no  is "+ JSON.stringify(dataR[1])+"<br><br>");
             $("#msg").html( " Address of Roll no  is "+ dataR+"<br><br>");
-        });
+        });*/
 }
 </script>
 </head>
@@ -52,28 +56,8 @@ function getdetails2(){
 			<div id="msg"></div>
 		</div>
 		<div class="col-4">
-			<div class="panel panel-default">
+			<div class="panel panel-default" id="signup">
 
-
-    
-
-<form>
-  <div class="form-group">
-    <label for="login1">Login</label>
-    <input type="text" class="form-control" id="login1"  placeholder="Enter login">
-    <small id="loginHelp" class="form-text text-muted">Введите логин</small>
-  </div>
-  <div class="form-group">
-    <label for="password1">Password</label>
-    <input type="password" class="form-control" id="password1" placeholder="Password">
-  </div>
-  <div class="form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-  </div>
-  <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
-  <input type="button" name="submit" id="submit" value="submit" onClick = "getdetails2()" />
-</form>
 <div>
 <!-- 	<?php
 	include_once "db/Table.php";
@@ -93,5 +77,11 @@ function getdetails2(){
 <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> -->
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script>
+  $(document).ready(function(){
+    app.displaySignup();
+    //$("#msg").html("displayMsg() Workes!"); //app.displayMsg();
+  })
+</script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 <?php
 include "setting.php";
-include "./lib.php";
+//include "./lib.php";
 
 class Table{
 	public $host, $user, $pass, $dbname; //$returns="zadralo!";
