@@ -9,6 +9,9 @@ $password = isset($_POST['password']) ? $_POST['password'] : "NOT PASSWORD1";
 
 //$data=$usersTable->createCommand("SELECT * FROM `users` WHERE `login`='misha' AND `password`='0002'");
 $data=$usersTable->createCommand("SELECT * FROM `users` WHERE `login`='".$login."' AND `password`='".$password."'");
+//header("Location:page1.php");
+//echo "<meta http-equiv=refresh content=0;URL=http://adress.ru>";
+
 echo $data;
 	
 ?>

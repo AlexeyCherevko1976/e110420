@@ -1,6 +1,7 @@
 <?php
 //include_once "page1.php";
-include_once "page2.php";
+include "page2.php";
+
 //include_once "animation687effection.php"; // work!
 
 
