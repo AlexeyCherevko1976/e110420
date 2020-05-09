@@ -1,10 +1,15 @@
 <?php
+session_start();
 if ($_POST){
 	//echo $_POST['Submit'];}
-	if (($_POST['user_name']==cleo) && $_POST["user_pass"]="password"){
+	if (($_POST['user_name']=="cleo") && $_POST["user_pass"]="password"){
 		$_SESSION['logged_user']=$_POST['user_name'];
-		header("location: e0805/secretplace.php");
+
+		header("Location: secretplace.php"); exit();
 	}
+//echo "Вы ввели неправильный пароль!";
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
