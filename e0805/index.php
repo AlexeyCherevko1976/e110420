@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +12,7 @@
 <div class="row">
 	<div class="col-10"></div>
 	<div class="col-2">
+	<? if(!isset($_SESSION['logged_user'])){echo '
 		<form action="e0805/authorize.php" method="post">
 			<div class="form-group">
 				<label for="user_name">Логин</label>
@@ -26,7 +28,16 @@
 				<label for="сheck1" class="form-check-label"></label>
 			</div>			
 			<input type="submit" value="Submit" name="Submit">
-		</form>		
+		</form>				
+		';	}else{echo 
+		'<div>Пользователь: <div class="text-primary">'.$_SESSION['logged_user'].'</div></div>
+		<form action="" method="post">
+			<input type="text" name="out" hidden id="out" value="ttt">
+			<input type="submit" value="Выйти" name="Out">
+		</form>';
+		}
+	?>
+
 	</div>
 </div>	
 	

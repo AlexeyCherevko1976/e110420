@@ -6,6 +6,7 @@ if ($_POST){
 		$_SESSION['logged_user']=$_POST['user_name'];
 
 		header("Location: secretplace.php"); exit();
+		//header("Location: ./index.php"); exit();
 	}
 //echo "Вы ввели неправильный пароль!";
 }
