@@ -1,5 +1,13 @@
 <?
 session_start();
+include("./app/application.php");
+if(!is_a($_SESSION['app'], 'application')){$_SESSION['app']=new application();}
+//$_SESSION['app']=new application();
+echo $_SESSION['app']->request->data;
+
+$_SESSION['app']->post=$_POST;
+if (isset($_SESSION['app']->post['user_name'])){echo $_SESSION['app']->post['user_name'];}
+else{echo "not user_NAME";}
 
 if ($_POST){
 	//echo $_POST['Submit'];}

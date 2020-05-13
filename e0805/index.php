@@ -13,7 +13,7 @@
 	<div class="col-10"></div>
 	<div class="col-2">
 	<? if(!isset($_SESSION['logged_user'])){echo '
-		<form action="e0805/authorize.php" method="post">
+		<form action="" method="post">
 			<div class="form-group">
 				<label for="user_name">Логин</label>
 				<input type="text" id="user_name" name="user_name" class="form-control" placeholder="Введите логин">
