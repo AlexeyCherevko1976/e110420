@@ -12,7 +12,7 @@
 <div class="row">
 	<div class="col-10"></div>
 	<div class="col-2">
-	<? if(!isset($_SESSION['logged_user'])){echo '
+	<? if(!$GLOBALS['user_signup']){echo '
 		<form action="" method="post">
 			<div class="form-group">
 				<label for="user_name">Логин</label>
