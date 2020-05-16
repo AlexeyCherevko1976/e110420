@@ -21,7 +21,7 @@
 			</div>
 			<div class="form-group">
 				<label for="user_pass">Пароль</label>
-				<input type="password"  id="user_pass" class="form-control" placeholder="Введите пароль">
+				<input type="password"  id="user_pass" name="user_pass" class="form-control" placeholder="Введите пароль">
 			</div>
 			<div class="form-check">
 				<input type="checkbox" class="form-check-input" id="check1" name="check1">
@@ -30,7 +30,7 @@
 			<input type="submit" value="Submit" name="Submit">
 		</form>				
 		';	}else{echo 
-		'<div>Пользователь: <div class="text-primary">'.$_SESSION['logged_user'].'</div></div>
+		'<div>Пользователь: <div class="text-primary">'.$GLOBALS['app_login'].'</div></div>
 		<form action="" method="post">
 			<input type="text" name="out" hidden id="out" value="ttt">
 			<input type="submit" value="Выйти" name="Out">
