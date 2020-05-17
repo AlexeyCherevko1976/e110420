@@ -1,4 +1,5 @@
 <?
+session_start();
 class User{
 	public $signup;
 	function __construct(){

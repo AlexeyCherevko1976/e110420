@@ -7,6 +7,7 @@ $app=new Controller();
 $user=new User();
 $view=new View();
 
+echo $user->signup==false ? "FALSE" : "TRUE";
 $user->signup=((!$user->signup && $user->validate($app->login, $app->password)) || ($user->signup && !$app->outSignup)) ? true : false;
 
 
