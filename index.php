@@ -1,20 +1,8 @@
 <?
 session_start();
-include("./app/controller.php");
-include("./app/user.php");
-include("./app/view.php");
-$app=new Controller();
-$user=new User();
-$view=new View();
-
-echo $user->signup==false ? "FALSE" : "TRUE";
-$user->signup=((!$user->signup && $user->validate($app->login, $app->password)) || ($user->signup && !$app->outSignup)) ? true : false;
-
-
-$user_signup=$user->signup; $app_login=$app->login;
-$view->pageInclude('index');
-
-$user->close();
-
+// 
+if (isset($_SESSION['exam1'])){echo $_SESSION['exam1']."<br>";}else{echo "NOT<br>";}
+$_SESSION['exam1']=isset($_SESSION['exam1']) ? $_SESSION['exam1']=$_SESSION['exam1']+1 : 1;
+if (isset($_SESSION['exam1'])){echo $_SESSION['exam1'];}else{echo "NOT";}
 
 ?>
