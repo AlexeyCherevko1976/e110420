@@ -27,53 +27,6 @@
 	
     <link href="css/application.css" rel="stylesheet">
 <script src="http://code.jquery.com/jquery-latest.js"></script>
-<script>
-$(document).ready(function(){
-		$('#b1').css('backgroundColor', 'green');
-$('div').responsiveBlock();
-
-});
-(function($){
-  jQuery.fn.responsiveBlock = function(options){
-    options = $.extend({
-      defColor:"white", //цвет элемента над которым нет курсора
-      hoverColor:"red" //цвет элемента на который наведен курсор
-    }, options);
-
-    var make = function(){
-      // здесь переменная this будет содержать отдельный
-      // DOM-элемент, к которому и нужно будет применить
-      // воздействия плагина
-      $(this).css("background-color",options.defColor)
-      .mouseenter( function(){
-        $(this).css("background-color",options.hoverColor);
-      })
-      .mouseleave( function(){
-        $(this).css("background-color",options.defColor);
-      });
-    };
-
-    return this.each(make); 
-  };
-})(jQuery);
-
-//$('#b2').responsiveBlock();
-		function display1(){
-		    
-		    var valText1= $('#text1').val();
-		    var valPassword1 = $('#password1').val();
-		    alert(valText1);
-		    $.ajax({
-		        type: "POST",
-		        url: "analiz1.php",
-		        data: {password1:valPassword1, check1:valCheck1}
-		    }).done(function( result )
-		        {
-		            alert( " is "+result );
-		        });
-		}
-
-	</script>
 
 </head>
 <body>
@@ -129,5 +82,53 @@ $('div').responsiveBlock();
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script>
+$(document).ready(function(){
+		$('#b1').css('backgroundColor', 'green');
+$('div').responsiveBlock();
+
+});
+(function($){
+  jQuery.fn.responsiveBlock = function(options){
+    options = $.extend({
+      defColor:"white", //цвет элемента над которым нет курсора
+      hoverColor:"red" //цвет элемента на который наведен курсор
+    }, options);
+
+    var make = function(){
+      // здесь переменная this будет содержать отдельный
+      // DOM-элемент, к которому и нужно будет применить
+      // воздействия плагина
+      $(this).css("background-color",options.defColor)
+      .mouseenter( function(){
+        $(this).css("background-color",options.hoverColor);
+      })
+      .mouseleave( function(){
+        $(this).css("background-color",options.defColor);
+      });
+    };
+
+    return this.each(make); 
+  };
+})(jQuery);
+
+//$('#b2').responsiveBlock();
+		function display1(){
+		    
+		    var valText1= $('#text1').val();
+		    var valPassword1 = $('#password1').val();
+		    alert(valText1);
+		    $.ajax({
+		        type: "POST",
+		        url: "analiz1.php",
+		        data: {password1:valPassword1, check1:valCheck1}
+		    }).done(function( result )
+		        {
+		            alert( " is "+result );
+		        });
+		}
+
+	</script>
+
 </body>
 </html>
