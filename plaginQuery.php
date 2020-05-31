@@ -32,9 +32,17 @@ $(document).ready(function(){
 		$('#b1').css('backgroundColor', 'green');
 //$('#b2').responsiveBlock();
 
-});
 (function($){
-  jQuery.fn.responsiveBlock = function(){
+  jQuery.fn.responsiveBlock = function(options){
+    // Зададим список свойств и укажем для них значения по умолчанию.
+    // Если при вызове метода будут указаны пользовательские
+    // варианты некоторых из них, то они автоматически перепишут
+    // соответствующие значения по умолчанию
+    options = $.extend({
+      defColor:"white", //цвет элемента над которым нет курсора
+      hoverColor:"red" //цвет элемента на который наведен курсор
+    }, options};
+ 
     var make = function(){
       // реализация работы метода с отдельным элементом страницы
     };
@@ -43,6 +51,14 @@ $(document).ready(function(){
     // в итоге, метод responsiveBlock вернет текущий объект jQuery обратно
   };
 })(jQuery);
+ 
+// теперь можно задавать плагин с настройками по умолчанию:
+$('div:first').responsiveBlock();
+ 
+// или указать свои значения некоторых или всех настроек
+$('div:last').responsiveBlock({defColor:"#bbbbbb"});
+$('ul').responsiveBlock({defColor:"#aaaaaa", hoverColor:"green"});
+
 
 		function display1(){
 		    
