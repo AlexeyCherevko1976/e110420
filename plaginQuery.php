@@ -26,8 +26,23 @@
 	<link href="css/ripples.min.css" rel="stylesheet">
 	
     <link href="css/application.css" rel="stylesheet">
-<script src="http://code.jquery.com/jquery-latest.js"></script>
-
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<style> 
+	body{
+		background: silver ;
+		}
+/*	
+	.insert3{
+			width:400px;
+			height:400px;
+			background:plum url(s1200.jpeg);
+		   /* background-size:400px 400px;
+			background-repeat:no-repeat;*/
+	}
+	.insert4{
+	}
+*/
+	</style>
 </head>
 <body>
 <div class="row">
@@ -35,7 +50,7 @@
 		<div class="col-md-2" id="b2"></div>
 		<div class="col-md-2" id="b3"></div>
 		<div class="col-md-2" id="b4"></div>
-		<div class="col-md-2" id="b5"></div>
+		<div class="col-md-2" id="b5" class="b5"></div>
 		<div class="col-md-2 ">
 			<div class="panel panel-default">
 				<form action="index.php" method="post" name="form1">
@@ -47,8 +62,7 @@
 					<div class="form-group">
 						<label for="inputPassword1">Password1</label>
 						<input type="password" class="form-control" id="password1" name="password1" size="20" placeholder="Пароль">
-					</div>
-					<div class="form-check">
+					</div> <div class="form-check">
 						<input type="checkbox" class="form-check-input" id="check1" name="check1">
 						<label for="exampleCheck1" class="form-check-label"></label>
 					</div>
@@ -58,8 +72,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="insert2">
-	</div>
+	<div class="insert2">	</div>
 	<div class="insert1">
 		
 		<? //echoPost(["text1", "password1", "check1", "submit", "form1"]); ?>
@@ -76,7 +89,10 @@
 		?>
 
 	</div>
-</div>
+
+<div class="insert3"></div>
+
+<div class="insert4"><img src="s1200.jpg" alt="Ne otobrajatsja!"/></div>
 
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -85,9 +101,33 @@
 <script>
 $(document).ready(function(){
 		$('#b1').css('backgroundColor', 'green');
-$('div').responsiveBlock();
+$("#b2, #b3").responsiveBlock();
+$(".b4").imageSlider();
 
 });
+(function($){
+  jQuery.fn.imageSlider = function(options){
+    options = $.extend({
+      defColor:"white", //цвет элемента над которым нет курсора
+      hoverColor:"red" //цвет элемента на который наведен курсор
+    }, options);
+
+    var make = function(){
+      // здесь переменная this будет содержать отдельный
+      // DOM-элемент, к которому и нужно будет применить
+      // воздействия плагина
+      $(this).css("background-color",options.defColor)
+      .mouseenter( function(){
+        $(this).css("background-color",options.hoverColor);
+      })
+      .mouseleave( function(){
+        $(this).css("background-color",options.defColor);
+      });
+    };
+
+    return this.each(make); 
+  };
+})(jQuery);
 (function($){
   jQuery.fn.responsiveBlock = function(options){
     options = $.extend({
