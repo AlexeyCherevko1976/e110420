@@ -72,7 +72,8 @@
 			</div>
 		</div>
 	</div>
-	<div class="insert2">	</div>
+	<div class="insert5"><img scr="example1.JPG">	</div>
+	<div class="insert6"><img scr="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Charles_Darwin_seated_crop.jpg/200px-Charles_Darwin_seated_crop.jpg">	</div>
 	<div class="insert1">
 		
 		<? //echoPost(["text1", "password1", "check1", "submit", "form1"]); ?>
