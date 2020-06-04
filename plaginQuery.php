@@ -58,9 +58,9 @@
 			</div>
 		</div>
 	</div>
-	<div class="insert2">
+	<div class="insert2"><img src="example1.JPG" alt="Не работает!">
 	</div>
-	<div class="insert1">
+	<div class="insert1"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Charles_Darwin_seated_crop.jpg/200px-Charles_Darwin_seated_crop.jpg" alt="не работает 2!">
 		
 		<? //echoPost(["text1", "password1", "check1", "submit", "form1"]); ?>
 		<?php //if (isset($_POST["text1"])){echo $_POST["text1"]."<br>";}; 
