@@ -72,7 +72,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="insert5"><img scr="example1.JPG">	</div>
+	<div class="insert5"><img scr="images/example1.JPG">	</div>
 	<div class="insert6"><img scr="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Charles_Darwin_seated_crop.jpg/200px-Charles_Darwin_seated_crop.jpg">	</div>
 	<div class="insert1">
 		
@@ -93,7 +93,7 @@
 
 <div class="insert3"></div>
 
-<div class="insert4"><img src="s1200.jpg" alt="Ne otobrajatsja!"/></div>
+<div class="insert4"><img src="images/kartinka.png" alt="Ne otobrajatsja!"/></div>
 
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
