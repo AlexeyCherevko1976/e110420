@@ -58,7 +58,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="insert2"><img src="example1.JPG" alt="Не работает!">
+	<div class="insert2"><img src="images/example1.jpg" alt="Не работает!">
 	</div>
 	<div class="insert1"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Charles_Darwin_seated_crop.jpg/200px-Charles_Darwin_seated_crop.jpg" alt="не работает 2!">
 		
