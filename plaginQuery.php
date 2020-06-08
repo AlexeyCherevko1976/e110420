@@ -20,13 +20,8 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-
-    <link href="css/roboto.min.css" rel="stylesheet">
-	<link href="css/material.min.css" rel="stylesheet">
-	<link href="css/ripples.min.css" rel="stylesheet">
-	
-    <link href="css/application.css" rel="stylesheet">
 <script src="http://code.jquery.com/jquery-latest.js"></script>
+<style> body{background:olive url(images/s1200.jpg) no-repeat top center; }> </style>
 
 </head>
 <body>
@@ -85,7 +80,7 @@
 <script>
 $(document).ready(function(){
 		$('#b1').css('backgroundColor', 'green');
-$('div').responsiveBlock();
+$('#b2,#b3').responsiveBlock();
 
 });
 (function($){
