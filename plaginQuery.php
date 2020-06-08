@@ -20,29 +20,16 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-
-    <link href="css/roboto.min.css" rel="stylesheet">
-	<link href="css/material.min.css" rel="stylesheet">
-	<link href="css/ripples.min.css" rel="stylesheet">
-	
-    <link href="css/application.css" rel="stylesheet">
 	<script src="http://code.jquery.com/jquery-latest.js"></script>
 	<style> 
-	body{
-		background: silver ;
+	
+body{
+		/* background: silver ; */
 		}
-/*	
-	.insert3{
-			width:400px;
-			height:400px;
-			background:plum url(s1200.jpeg);
-		   /* background-size:400px 400px;
-			background-repeat:no-repeat;*/
-	}
-	.insert4{
-	}
-*/
+
 	</style>
+	<link rel="stylesheet" href="css/style.css"
+	<script src="js/example.js"></script>
 </head>
 <body>
 <div class="row">
